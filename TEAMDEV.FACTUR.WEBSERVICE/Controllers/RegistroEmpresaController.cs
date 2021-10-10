@@ -113,6 +113,40 @@ namespace TEAMDEV.FACTUR.WEBSERVICE.Controllers
                 throw ex;
             }
         }
+
+
+        [HttpPost]
+        [Route("insertarEmpresa")]
+        public IHttpActionResult insertarEmpresa(RegistroEmpresaEN paramss)
+        {
+            try
+            {
+                var response = daregistroempresa.insertarEmpresa(paramss);
+                return Ok(response);
+            }
+            catch (Exception ex)
+
+            {
+
+                throw ex;
+            }
+        }
+        [HttpPost]
+        [Route("insertarUserAdminEmpresa")]
+        public IHttpActionResult insertarUserAdminEmpresa(RegistroEmpresaEN paramss)
+        {
+            try
+            {
+                var response = daregistroempresa.insertarUserAdminEmpresa(paramss);
+                return Ok(response);
+            }
+            catch (Exception ex)
+
+            {
+
+                throw ex;
+            }
+        }
     }
 
 }
